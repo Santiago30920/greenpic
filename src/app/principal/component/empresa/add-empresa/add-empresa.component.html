@@ -1,0 +1,38 @@
+<h1>Gestión</h1>
+<mat-form-field appearance="outline">
+  <mat-label>Nit</mat-label>
+  <input name="nit" matInput [(ngModel)]="empresa.empresa.nit" type="number" required #nit="ngModel" [disabled]="disable">
+  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-error *ngIf="nit.invalid">{{getErrorCampoRequerido()}}</mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Nombre</mat-label>
+  <input name="nit" matInput [(ngModel)]="empresa.empresa.nombre" type="text" required #nit="ngModel">
+  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-error *ngIf="nit.invalid">{{getErrorCampoRequerido()}}</mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Direccion</mat-label>
+  <input name="nit" matInput [(ngModel)]="empresa.empresa.direccion" type="text" required #nit="ngModel">
+  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-error *ngIf="nit.invalid">{{getErrorCampoRequerido()}}</mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Correo</mat-label>
+  <input name="nit" matInput [(ngModel)]="empresa.empresa.correo" type="email" required #nit="ngModel">
+  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-error *ngIf="nit.invalid">{{getErrorCampoRequerido()}}</mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Telefono</mat-label>
+  <input name="nit" matInput [(ngModel)]="empresa.empresa.telefono" type="number" required #nit="ngModel">
+  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-error *ngIf="nit.invalid">{{getErrorCampoRequerido()}}</mat-error>
+</mat-form-field>
+<div [hidden]="!disable">
+  <mat-checkbox color="warn" class="check-cupo" [(ngModel)]="empresa.empresa.estado">Habilitar</mat-checkbox>
+</div>
+<mat-dialog-actions>
+  <button mat-raised-button class="color" cdkFocusInitial (click)="confirmar()" [disabled] = "load">Confirmar</button>
+</mat-dialog-actions>
+<mat-progress-bar mode="indeterminate" *ngIf="load" ></mat-progress-bar>

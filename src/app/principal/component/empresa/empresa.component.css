@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+.contenido{
+  position: relative;
+  top: 10%;
+  margin: 0 auto;
+  width: 90%;
+}
+.contenido > mat-card > h1{
+  text-align: center;
+}
+.consultar{
+  width: 25% !important;
+  padding-right: 2.5%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.mat-elevation-z8{
+  position: relative;
+}
+
+td, th {
+  width: 25%;
+}
+.btn-edit{
+  background-color: #f5962a;
+}
