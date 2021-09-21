@@ -1,14 +1,17 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MessageService } from 'primeng/api';
 import { EOperacion } from 'src/app/domain/constantes/e-operacion.enum';
 import { ERespuesta } from 'src/app/domain/constantes/e-respuesta.enum';
+import { ESistema } from 'src/app/domain/constantes/e-sistema.enum';
 import { EmpresaDTO } from 'src/app/domain/dto/empresa-dto';
 import { RespuestaDTO } from 'src/app/domain/dto/respuesta-dto';
 
 @Component({
   selector: 'app-add-empresa',
   templateUrl: './add-empresa.component.html',
-  styleUrls: ['./add-empresa.component.css']
+  styleUrls: ['./add-empresa.component.css'],
+  providers: [MessageService]
 })
 export class AddEmpresaComponent implements OnInit {
 
@@ -24,7 +27,7 @@ export class AddEmpresaComponent implements OnInit {
   res: RespuestaDTO;
 
   //Abriendo constructor
-  constructor(private dialogRef: MatDialogRef<AddEmpresaComponent>, @Inject(MAT_DIALOG_DATA) public data: EmpresaDTO) {
+  constructor(private dialogRef: MatDialogRef<AddEmpresaComponent>, @Inject(MAT_DIALOG_DATA) public data: EmpresaDTO, private messageService: MessageService) {
     this.empresa = data;
     //Determinando si es editar o persitir
     if (this.empresa.operacion === EOperacion.EDITAR) {
@@ -52,6 +55,8 @@ export class AddEmpresaComponent implements OnInit {
           this.res.operacion = EOperacion.PERSISTIR;
           this.res.empresa = this.empresa
           this.dialogRef.close(this.res);
+        }else{
+          this.messageService.add({ severity: ESistema.TOAST_ERROR, summary: ERespuesta.ERROR_M, detail: ERespuesta.CAMPO_REQUERIDO});
         }
         break;
       case EOperacion.EDITAR:
@@ -61,6 +66,8 @@ export class AddEmpresaComponent implements OnInit {
           this.res.empresa = this.empresa
           this.res.operacion = EOperacion.EDITAR;
           this.dialogRef.close(this.res);
+        }else{
+          this.messageService.add({ severity: ESistema.TOAST_ERROR, summary: ERespuesta.ERROR_M, detail: ERespuesta.CAMPO_REQUERIDO});
         }
         break;
     }

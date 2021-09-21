@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@import url("../node_modules/primeicons/primeicons.css");
+@import url("../node_modules/primeng/resources/themes/saga-blue/theme.css");
+@import url("../node_modules/primeicons/primeicons.css");
+@import url("../node_modules/primeng/resources/primeng.min.css");
+.p-toast-message-custom {
+  background-color: #e1cfe7;
+  border: solid #8a427a;
+  border-width: 0 0 0 6px;
+  color: #2c1e30;
+}
+.p-toast-icon-close {
+  color: #2c1e30;
+}

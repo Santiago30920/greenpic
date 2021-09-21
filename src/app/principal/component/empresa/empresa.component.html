@@ -1,13 +1,13 @@
 <div class="contenido">
   <mat-card>
     <h1>USUARIOS</h1>
+    <button mat-mini-fab (click)="openDialog()" color="primary" aria-label="Example icon button with a menu icon">
+      <mat-icon>add</mat-icon>
+    </button>
     <mat-form-field class="consultar" appearance="standard">
       <mat-label>Buscar</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
     </mat-form-field>
-    <button mat-mini-fab (click)="openDialog()" color="primary" aria-label="Example icon button with a menu icon">
-      <mat-icon>add</mat-icon>
-    </button>
 
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource">
@@ -62,3 +62,4 @@
     </div>
   </mat-card>
 </div>
+<p-toast></p-toast>

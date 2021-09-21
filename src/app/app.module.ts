@@ -10,6 +10,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ToastModule} from 'primeng/toast';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,7 @@ import { AddEmpresaComponent } from './principal/component/empresa/add-empresa/a
     AddEmpresaComponent
   ],
   imports: [
+    ToastModule,
     MatCheckboxModule,
     MatDialogModule,
     MatProgressBarModule,
@@ -40,7 +42,7 @@ import { AddEmpresaComponent } from './principal/component/empresa/add-empresa/a
     BrowserModule,
     MatTableModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
