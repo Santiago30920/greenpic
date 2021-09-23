@@ -13,6 +13,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
 import {MatSelectModule} from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { AddUsuarioComponent } from './principal/component/usuario/add-usuario/a
     AddUsuarioComponent,
   ],
   imports: [
+    MatSidenavModule,
     MatSelectModule,
     RippleModule,
     BrowserAnimationsModule,

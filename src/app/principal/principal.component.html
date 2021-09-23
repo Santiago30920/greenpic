@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<mat-drawer-container style="height: 100%;" class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button (click)="empresa()" color="primary" mat-raised-button>
+      Empresa
+    </button>
+    <br><br>
+    <button (click)="usuario()" color="primary" mat-raised-button>
+      Usuario
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button mat-mini-fab color="primary" class="button-menu" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</mat-drawer-container>
