@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  font-weight: 600;
+}
+
+mat-form-field {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+mat-dialog-actions{
+  width: 100%;
+  position: relative;
+  margin: 0 auto !important;
+}
+mat-dialog-actions > button{
+  margin: 0 auto !important;
+}
+.color{
+  background-color: #529752;
+  color: white;
+}
+.color:hover{
+  background-color: white;
+  color: #529752;
+}
+.check-cupo {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  width: 100px;
+}

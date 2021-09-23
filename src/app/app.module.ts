@@ -12,6 +12,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,8 @@ import { PrincipalComponent } from './principal/principal.component';
 import { EmpresaComponent } from './principal/component/empresa/empresa.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddEmpresaComponent } from './principal/component/empresa/add-empresa/add-empresa.component';
+import { UsuarioComponent } from './principal/component/usuario/usuario.component';
+import { AddUsuarioComponent } from './principal/component/usuario/add-usuario/add-usuario.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,13 @@ import { AddEmpresaComponent } from './principal/component/empresa/add-empresa/a
     LoginComponent,
     PrincipalComponent,
     EmpresaComponent,
-    AddEmpresaComponent
+    AddEmpresaComponent,
+    UsuarioComponent,
+    AddUsuarioComponent,
   ],
   imports: [
-    RippleModule, 
+    MatSelectModule,
+    RippleModule,
     BrowserAnimationsModule,
     ToastModule,
     MatCheckboxModule,

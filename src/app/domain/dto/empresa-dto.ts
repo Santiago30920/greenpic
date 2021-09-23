@@ -8,7 +8,6 @@ export class EmpresaDTO extends GenericoDTO {
   empresa: Empresa;
   constructor() {
     super();
-    this.empresa = new Empresa()
-
+    this.empresa = new Empresa();
   }
 }

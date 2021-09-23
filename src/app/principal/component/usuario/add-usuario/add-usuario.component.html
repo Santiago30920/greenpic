@@ -1,0 +1,57 @@
+<h1>Gestión</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Nombres</mat-label>
+    <input matInput name="nombres" #nombres="ngModel" [(ngModel)]="usuario.usuario.nombres" required />
+    <mat-icon matSuffix>account_circle</mat-icon>
+    <mat-error *ngIf="nombres.invalid">{{getErrorCampoRequerido()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Apellidos</mat-label>
+    <input matInput name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.usuario.apellidos" required />
+    <mat-icon matSuffix>account_circle</mat-icon>
+    <mat-error *ngIf="apellidos.invalid">{{getErrorCampoRequerido()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Correo</mat-label>
+    <input matInput type="email" name="email" #email="ngModel" [(ngModel)]="usuario.usuario.correo" [disabled]="disable" required />
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="email.invalid">{{getErrorCampoRequerido()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>tipo de indentificacion</mat-label>
+    <mat-select name="tidentifi" #tidentifi="ngModel" [(ngModel)]="usuario.usuario.tidentifi" required>
+      <mat-option value="C.C">C.C</mat-option>
+      <mat-option value="T.I">T.I</mat-option>
+      <mat-option value="C.E">C.E</mat-option>
+    </mat-select>
+    <mat-error *ngIf="tidentifi.invalid">{{getErrorCampoRequerido()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>numero de indentificacion</mat-label>
+    <input matInput name="numero" type="number" #numero="ngModel" [(ngModel)]="usuario.usuario.nidentifi" [disabled]="disable" required />
+    <mat-icon matSuffix>badge</mat-icon>
+    <mat-error *ngIf="numero.invalid">{{getErrorCampoRequerido()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>empresaLabel</mat-label>
+    <mat-select name="empresa" #empresa="ngModel" [(ngModel)]="usuario.usuario.empresaLabel" required>
+      <mat-option value="EAN">EAN</mat-option>
+    </mat-select>
+    <mat-error *ngIf="empresa.invalid">{{getErrorCampoRequerido()}}</mat-error>
+  </mat-form-field>
+
+  <div [hidden]="!disable">
+    <mat-checkbox color="warn" class="check-cupo" [(ngModel)]="usuario.usuario.estado">Habilitar</mat-checkbox>
+  </div>
+
+  <mat-dialog-actions>
+    <button mat-raised-button class="color" cdkFocusInitial (click)="confirmar()" [disabled]="load">Confirmar</button>
+  </mat-dialog-actions>
+
+  <mat-progress-bar mode="indeterminate" *ngIf="load"></mat-progress-bar>
+  <p-toast></p-toast>
