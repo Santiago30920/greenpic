@@ -4,14 +4,16 @@ h1 {
 }
 
 mat-form-field {
-  width: 100%;
-  display: block;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
 mat-dialog-actions{
-  width: 42%;
+  width: 100%;
   position: relative;
+  margin: 0 auto !important;
+}
+mat-dialog-actions > button{
   margin: 0 auto !important;
 }
 .color{

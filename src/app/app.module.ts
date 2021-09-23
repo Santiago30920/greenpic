@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ToastModule} from 'primeng/toast';
+import {RippleModule} from 'primeng/ripple';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,8 @@ import { AddEmpresaComponent } from './principal/component/empresa/add-empresa/a
     AddEmpresaComponent
   ],
   imports: [
+    RippleModule, 
+    BrowserAnimationsModule,
     ToastModule,
     MatCheckboxModule,
     MatDialogModule,

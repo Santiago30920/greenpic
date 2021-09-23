@@ -7,6 +7,7 @@ import { ESistema } from 'src/app/domain/constantes/e-sistema.enum';
 import { EmpresaDTO } from 'src/app/domain/dto/empresa-dto';
 import { RespuestaDTO } from 'src/app/domain/dto/respuesta-dto';
 
+
 @Component({
   selector: 'app-add-empresa',
   templateUrl: './add-empresa.component.html',
@@ -27,7 +28,7 @@ export class AddEmpresaComponent implements OnInit {
   res: RespuestaDTO;
 
   //Abriendo constructor
-  constructor(private dialogRef: MatDialogRef<AddEmpresaComponent>, @Inject(MAT_DIALOG_DATA) public data: EmpresaDTO, private messageService: MessageService) {
+  constructor(private messageService: MessageService, private dialogRef: MatDialogRef<AddEmpresaComponent>, @Inject(MAT_DIALOG_DATA) public data: EmpresaDTO) {
     this.empresa = data;
     //Determinando si es editar o persitir
     if (this.empresa.operacion === EOperacion.EDITAR) {
@@ -56,7 +57,7 @@ export class AddEmpresaComponent implements OnInit {
           this.res.empresa = this.empresa
           this.dialogRef.close(this.res);
         }else{
-          this.messageService.add({ severity: ESistema.TOAST_ERROR, summary: ERespuesta.ERROR_M, detail: ERespuesta.CAMPO_REQUERIDO});
+          this.messageService.add({ severity: ESistema.TOAST_ERROR, summary: ERespuesta.ERROR_M, detail: ERespuesta.CAMPO_REQUERIDO });
         }
         break;
       case EOperacion.EDITAR:

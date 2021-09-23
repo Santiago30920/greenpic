@@ -1,34 +1,33 @@
-<p-toast></p-toast>
 <h1>Gestión</h1>
 <mat-form-field appearance="outline">
   <mat-label>Nit</mat-label>
   <input name="nit" matInput [(ngModel)]="empresa.empresa.nit" type="number" required #nit="ngModel" [disabled]="disable" required>
-  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-icon matSuffix>badge</mat-icon>
   <mat-error *ngIf="nit.invalid">{{getErrorCampoRequerido()}}</mat-error>
 </mat-form-field>
 <mat-form-field appearance="outline">
   <mat-label>Nombre</mat-label>
   <input name="nombre" matInput [(ngModel)]="empresa.empresa.nombre" type="text" required #nombre="ngModel" required>
-  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-icon matSuffix>account_circle</mat-icon>
   <mat-error *ngIf="nombre.invalid">{{getErrorCampoRequerido()}}</mat-error>
 </mat-form-field>
 <mat-form-field appearance="outline">
   <mat-label>Direccion</mat-label>
   <input name="direccion" matInput [(ngModel)]="empresa.empresa.direccion" type="text" required #direccion="ngModel" required>
-  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-icon matSuffix>location_on</mat-icon>
   <mat-error *ngIf="direccion.invalid">{{getErrorCampoRequerido()}}</mat-error>
-</mat-form-field>
-<mat-form-field appearance="outline">
-  <mat-label>Correo</mat-label>
-  <input name="correo" matInput [(ngModel)]="empresa.empresa.correo" type="email" required #correo="ngModel" required>
-  <mat-icon matSuffix>qr_code_scanner</mat-icon>
-  <mat-error *ngIf="correo.invalid">{{getErrorCampoRequerido()}}</mat-error>
 </mat-form-field>
 <mat-form-field appearance="outline">
   <mat-label>Telefono</mat-label>
   <input name="telefono" matInput [(ngModel)]="empresa.empresa.telefono" type="number" required #telefono="ngModel" required>
-  <mat-icon matSuffix>qr_code_scanner</mat-icon>
+  <mat-icon matSuffix>phone</mat-icon>
   <mat-error *ngIf="telefono.invalid">{{getErrorCampoRequerido()}}</mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline" style="width: 100%;">
+  <mat-label>Correo</mat-label>
+  <input name="correo" matInput [(ngModel)]="empresa.empresa.correo" type="email" required #correo="ngModel" required>
+  <mat-icon matSuffix>email</mat-icon>
+  <mat-error *ngIf="correo.invalid">{{getErrorCampoRequerido()}}</mat-error>
 </mat-form-field>
 <div [hidden]="!disable">
   <mat-checkbox color="warn" class="check-cupo" [(ngModel)]="empresa.empresa.estado">Habilitar</mat-checkbox>
@@ -37,3 +36,4 @@
   <button mat-raised-button class="color" cdkFocusInitial (click)="confirmar()" [disabled] = "load">Confirmar</button>
 </mat-dialog-actions>
 <mat-progress-bar mode="indeterminate" *ngIf="load" ></mat-progress-bar>
+<p-toast></p-toast>

@@ -5,5 +5,5 @@ export enum ERespuesta {
   WARN = "Alerta",
   ALMACENADO = 'Ha sido registrado correctamente',
   ACTUALIZADO = 'Ha sido actualizado correctamente',
-  CAMPO_REQUERIDO = 'El campo es requerido',
+  CAMPO_REQUERIDO = 'Todos los campos deben ser llenado antes de continuar',
 }
