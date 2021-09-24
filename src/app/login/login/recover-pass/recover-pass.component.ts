@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-recover-pass',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecoverPassComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogRef: MatDialogRef<RecoverPassComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: string) { }
 
   ngOnInit(): void {
+  }
+  atras(){
+    this.dialogRef.close();
   }
 
 }

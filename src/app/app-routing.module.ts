@@ -5,11 +5,12 @@ import { EmpresaComponent } from './principal/component/empresa/empresa.componen
 import { UsuarioComponent } from './principal/component/usuario/usuario.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { PrincipalPageComponent } from './login/principal-page/principal-page.component';
-import { ResgistroComponent } from './login/login/resgistro/resgistro.component';
-import { RecoverPassComponent } from './login/login/recover-pass/recover-pass.component';
 
 
 const routes: Routes = [
+  {
+    path: '', component:PrincipalPageComponent
+  },
   {
     path: 'principal',
     component: PrincipalComponent,
@@ -19,17 +20,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'Login', component: LoginComponent,
+    path: 'Login',
+    component: LoginComponent,
   },
-  {
-    path: 'Principal_Page', component:PrincipalPageComponent
-  },
-  {
-    path: 'Registro', component:ResgistroComponent
-  },
-  {
-    path: 'RecoverPass', component:RecoverPassComponent
-  }
 ];
 
 @NgModule({

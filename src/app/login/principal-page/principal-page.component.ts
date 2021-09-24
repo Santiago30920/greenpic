@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { ResgistroComponent } from '../login/resgistro/resgistro.component';
 
 @Component({
   selector: 'app-principal-page',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, public dialog: MatDialog,) {
+  }
 
   ngOnInit(): void {
   }
-
+  continuar() {
+    this.router.navigate(['Login']);
+  }
+  register(): void {
+    const ref = this.dialog.open(ResgistroComponent, {
+      data: ''
+    });
+  }
 }

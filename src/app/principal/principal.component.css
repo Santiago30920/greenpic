@@ -20,7 +20,9 @@ li p {
   font-weight: 500;
   color: #ffff;
 }
-
+.salir{
+  margin: 0 0 0 auto;
+}
 li .icono-menu {
   float: left;
   margin-left: 10px;
