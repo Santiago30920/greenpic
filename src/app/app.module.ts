@@ -24,6 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddEmpresaComponent } from './principal/component/empresa/add-empresa/add-empresa.component';
 import { UsuarioComponent } from './principal/component/usuario/usuario.component';
 import { AddUsuarioComponent } from './principal/component/usuario/add-usuario/add-usuario.component';
+import { PrincipalPageComponent } from './login/principal-page/principal-page.component';
+import { ResgistroComponent } from './login/login/resgistro/resgistro.component';
+import { RecoverPassComponent } from './login/login/recover-pass/recover-pass.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { AddUsuarioComponent } from './principal/component/usuario/add-usuario/a
     AddEmpresaComponent,
     UsuarioComponent,
     AddUsuarioComponent,
+    PrincipalPageComponent,
+    ResgistroComponent,
+    RecoverPassComponent,
   ],
   imports: [
     MatSidenavModule,

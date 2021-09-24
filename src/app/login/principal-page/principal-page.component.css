@@ -1,0 +1,94 @@
+.cuerpo {
+    background-color: #68b474;
+    height: 100%;
+}
+
+#optionNav {
+    height: 100px;
+    background-color: #68b474;
+}
+
+#botonFlotante {
+    background-color: #68b474;
+    border: white 1px solid;
+}
+
+#optionNavMovil1 {
+    height: 100px;
+    background-color: #68b474;
+}
+
+#Logo {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: Gilroy;
+}
+
+#LogoMovil {
+    font-size: 30px;
+    margin-left: 10px;
+    font-family: Gilroy;
+}
+
+#Logo2 {
+    font-family: Gilroy;
+    color: black;
+}
+
+#Logo3 {
+    font-family: Gilroy;
+    color: white;
+}
+
+#entrarbtn {
+    background-color: white;
+}
+
+#entrarbtn:hover {
+    background-color: black;
+}
+
+#entraricon {
+    color: #68b474;
+}
+
+#entraricon:hover {
+    color: white;
+}
+
+#presentacion {
+    font-size: 25px;
+    color: white;
+    margin-left: 2px;
+}
+
+#presentacionMovil {
+    font-size: 15px;
+    color: white;
+    margin-left: 2px;
+}
+
+#texto {
+    padding: 0px;
+    text-align: left;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 230px;
+    margin-left: 50px;
+    color: white;
+    line-height: 35px;
+    font-size: 50px;
+}
+
+#textoMovil {
+    padding: 0px;
+    text-align: left;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 40px;
+    margin-left: 10px;
+    color: white;
+    font-size: 30px;
+    line-height: 30px;
+}

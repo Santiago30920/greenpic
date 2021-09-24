@@ -1,34 +1,40 @@
 @import url("../node_modules/primeng/resources/themes/saga-blue/theme.css");
 @import url("../node_modules/primeicons/primeicons.css");
 @import url("../node_modules/primeng/resources/primeng.min.css");
+
+/*@import url("assets/fonts/Gilroy-ExtraBold.otf");
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
+
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 @media print {
-  /* :not(.print) {
+    /* :not(.print) {
     display: none !important;
   } */
-  .mat-dialog-container {
-    box-shadow: none !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-  }
-
-  .mat-dialog-content {
-    height: 100%;
-    width: 100% !important;
-    max-height: none !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+    @font-face {
+        font-family: Gilroy;
+        src: url(assets/fonts/Gilroy-ExtraBold.otf) format("opentype");
+    }
+    .mat-dialog-container {
+        box-shadow: none !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+    }
+    .mat-dialog-content {
+        height: 100%;
+        width: 100% !important;
+        max-height: none !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }
-

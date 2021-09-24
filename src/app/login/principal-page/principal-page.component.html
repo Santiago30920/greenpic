@@ -1,0 +1,90 @@
+<div class="cuerpo">
+    <!--PC-->
+    <nav id="optionNav" class="z-depth-0 hide-on-med-and-down">
+        <div class="nav-wrapper">
+            <a id="Logo" href="#" class="brand-logo">GreenPic</a>
+            <div class="fixed-action-btn right" style="bottom: 670px; ">
+                <a id="botonFlotante" class="btn-floating btn-large hide-on-med-and-down">
+                    <i class="material-icons">login</i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating tooltipped deep-purple darken-1" data-position="left" data-tooltip="Registrarse"><i class="material-icons">how_to_reg</i></a></li>
+                    <li><a class="btn-floating indigo darken-1 tooltipped indigo" data-position="left" data-tooltip="Iniciar sesión"><i class="material-icons">person_pin</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="row hide-on-med-and-down">
+        <div class="col s12 m12 l6">
+            <div class="texto">
+                <h1 id="texto"><span>Bienvenido a </span><span id="Logo2">GreenPic</span>
+                    <p id="presentacion">una nueva experiencia de reciclaje moderno.</p>
+                </h1>
+                <h1 style="font-size: 25px; margin-left: 52px; color: white;"><span>Recicla a lo </span><span id="Logo3">GreenPic </span><span>ahora</span>
+                    <a id="entrarbtn" style="margin-left: 20px; " class="btn-floating btn-large waves-effect waves-light"><i id="entraricon" class="material-icons">arrow_forward</i></a>
+                </h1>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l6">
+            <div class="div right-align" style="margin-right: 180px; margin-right: 180px; ">
+                <img style="width: 350px; height: 600px; " src="../../../assets/img/IsotipoFinal.png" alt=" ">
+            </div>
+        </div>
+    </div>
+    <!--PC-->
+
+    <!--Movil-->
+    <nav style="background-color: #68b474; " class="hide-on-large-only">
+        <div class="nav-wrapper hide-on-large-only">
+            <a id="LogoMovil" href="#" class="brand-logo left">GreenPic</a>
+            <a style="margin-right: 10px;" class="dropdown-trigger right" data-target='dropdown1'><i class="material-icons ">login</i></a>
+        </div>
+    </nav>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">Iniciar sesión</a></li>
+        <li><a href="#!">Registrarse</a></li>
+    </ul>
+
+    <div class="row hide-on-large-only">
+
+        <div class="col s12 m6 l12">
+            <div class="div right-align" style="margin-right: 80px; margin-right: 80px;">
+                <img style="width: 170px; height: 300px; margin-top: 30px;" src="../../../assets/img/IsotipoFinal.png" alt="">
+            </div>
+        </div>
+
+        <div class="col s12 m6 l12">
+            <div class="texto">
+                <h1 id="textoMovil"><span>Bienvenido a </span><span id="Logo2">GreenPic</span>
+                    <p id="presentacionMovil">una nueva experiencia de reciclaje moderno.</p>
+                </h1>
+                <h1 style="font-size: 15px; margin-left: 52px; color: white;"><span>Recicla a lo </span><span id="Logo3">GreenPic </span><span>ahora</span>
+                    <a id="entrarbtn" style="margin-left: 20px;" class="btn-floating btn-large waves-effect waves-light"><i id="entraricon" class="material-icons">arrow_forward</i></a>
+                </h1>
+            </div>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js " integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+        <script>
+            $('.dropdown-trigger').dropdown();
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.fixed-action-btn');
+                var instances = M.FloatingActionButton.init(elems, {
+                    direction: 'bottom'
+                });
+            });
+
+            $(document).ready(function() {
+                $('.tooltipped').tooltip();
+            });
+        </script>
+    </div>
