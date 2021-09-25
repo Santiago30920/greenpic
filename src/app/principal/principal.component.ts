@@ -20,4 +20,8 @@ export class PrincipalComponent implements OnInit {
     this.router.navigate(['principal/'+'usuario']);
   }
 
+  salir(){
+    this.router.navigate(['']);
+  }
+
 }

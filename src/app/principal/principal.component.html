@@ -1,29 +1,31 @@
 <mat-drawer-container style="height: 100%;" class="example-container">
-  <!-- autosize -->
-  <mat-drawer #drawer class="example-sidenav">
-    <button (click)="empresa()" color="primary" mat-raised-button>
+    <!-- autosize -->
+    <mat-drawer #drawer class="example-sidenav">
+        <button (click)="empresa()" color="primary" mat-raised-button>
       Empresa
     </button>
-    <br><br>
-    <button (click)="usuario()" color="primary" mat-raised-button>
+        <br><br>
+        <button (click)="usuario()" color="primary" mat-raised-button>
       Usuario
     </button>
-  </mat-drawer>
+    </mat-drawer>
 
-  <div class="example-sidenav-content">
-    <div class="buttons">
-      <button mat-mini-fab color="primary" class="button-menu" (click)="drawer.toggle()">
+    <div class="example-sidenav-content">
+        <div class="buttons">
+            <button mat-mini-fab color="primary" class="button-menu" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
-      </button>
-      <button class="salir" mat-icon-button color="primary">
+
+      </button >
+            <button (click) = 'salir()' class="salir" mat-icon-button color="primary">
         <mat-icon>
           logout
         </mat-icon>
       </button>
+
+        </div>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
     </div>
-    <div>
-      <router-outlet></router-outlet>
-    </div>
-  </div>
 
 </mat-drawer-container>

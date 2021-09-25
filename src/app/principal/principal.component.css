@@ -1,38 +1,49 @@
-.button-menu{
-  margin-left: 5%;
-  margin-top: 1.5%;
-  margin-bottom: 2.5%;
+.button-menu {
+    margin-left: 5%;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
 }
+
+.buttons {
+    width: 95%;
+}
+
 .example-sidenav {
-  padding: 50px;
+    padding: 50px;
 }
-.mat-drawer-inner-container{
-  display: block !important;
+
+.mat-drawer-inner-container {
+    display: block !important;
 }
-.mat-drawer-inner-container > button{
-  margin-top: 1.5%;
+
+.mat-drawer-inner-container>button {
+    margin-top: 1.5%;
 }
+
 li p {
-  position: relative;
-  top: 6px;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffff;
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffff;
 }
-.salir{
-  margin: 0 0 0 auto;
+
+.salir {
+    margin: 0 0 0 auto;
+    float: right;
+    margin-top: 10px;
 }
+
 li .icono-menu {
-  float: left;
-  margin-left: 10px;
-  position: relative;
-  padding: 5px;
-  color: white;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+    padding: 5px;
+    color: white;
 }
 
-.menu{
-  z-index: -1;
-  margin-top: 20px;
+.menu {
+    z-index: -1;
+    margin-top: 20px;
 }
-
